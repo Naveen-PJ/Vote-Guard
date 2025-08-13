@@ -1,0 +1,31 @@
+# Python Bytecode
+__pycache__/
+*.pyc
+
+# Virtual Environment
+venv/
+env/
+ENV/
+*.egg-info/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# log files
+*.log
+logs
+
+# Sensitive information
+*.env
+config.py
+
+# Other temporary files
+*.swp
+*.bak
+
+# Ignore all files in the directory
+models
+memory
+
+# Streamlit Cache
+.streamlit/
