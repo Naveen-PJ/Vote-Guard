@@ -6,6 +6,11 @@ from datetime import datetime
 from typing import TypedDict, List
 import streamlit as st # Import streamlit to access st.secrets
 
+# Fix for ChromaDB's sqlite3 dependency on some systems (e.g., Streamlit Cloud)
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 # Load environment variables if they exist for local development, but we'll prioritize st.secrets
 # from dotenv import load_dotenv
 # load_dotenv()
